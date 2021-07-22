@@ -106,12 +106,30 @@ body {
 .text-color--blue {
   color: $blue;
 }
+//screen size xs-320, sm-576, md-768, lg-992, xl-1200, xxl-1400 and up
 .container {
-  width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+  @media only screen and (min-width: 320px) and (max-width: 575.98px){
+    width: 100%;
+  }
+  @media only screen and (min-width: 576px) and (max-width: 767.98px){
+    width: 100%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991.98px){
+    width: 100%;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199.98px){
+    width: 100%;
+  }
+  @media only screen and (min-width: 1230px){
+    width: 1200px;
+  }
   &--sm {
     width: 770px;
+    @media only screen and (max-width: 769px){
+      width: 100%;
+    }
   }
   &--xs {
     width: 470px;
@@ -135,8 +153,9 @@ h2 {
   line-height: 1.3em;
   margin-bottom: 60px;
   font-weight: 500;
-  @media only screen and (max-width: 620px){
+  @media only screen and (max-width: 768px){
     font-size: 26px;
+    margin-bottom: 30px;
   }
 }
 h3 {

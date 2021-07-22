@@ -25,9 +25,29 @@
     font-size: 16px;
     line-height: 1.5em;
     font-weight: 400;
+    margin: 0;
   }
   &__img {
     max-width: 231px;
     max-height: 248px;
+  }
+  @media only screen and (max-width: 768px){
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 30px;
+    }
+    &__title {
+      width: 52px;
+      height: 52px;
+      font-size: 38px;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+    &__discription {
+      font-size: 14px;
+    }
   }
 }

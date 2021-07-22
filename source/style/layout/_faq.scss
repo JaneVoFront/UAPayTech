@@ -36,7 +36,7 @@
   }
   & summary {
     width: 100%;
-    padding: 20px;
+    padding: 20px 45px 20px 20px;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.4em;
@@ -46,6 +46,13 @@
     padding: 20px;
     font-size: 14px;
     line-height: 1.5em;
+  }
+  @media only screen and (max-width: 768px){
+    width: 100%;
+    &:after {
+      width: 18px;
+      height: 12px;
+    }
   }
 }
 
