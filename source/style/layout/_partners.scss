@@ -1,0 +1,21 @@
+.partners-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.partners-item {
+  display: flex;
+  justify-content: center;
+  width: 156px;
+  height: 126px;
+  border-radius: 22px;
+  background-color: $white;
+  padding: 20px;
+  margin-right: 60px;
+  &__img {
+    width: auto;
+    height: auto;
+  }
+}

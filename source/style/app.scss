@@ -1,3 +1,7 @@
+// Fonts
+@import "base/_fonts";
+@import "base/_buttons";
+
 // Config
 @import "config/_variables";
 @import "config/_mixins";
@@ -8,6 +12,15 @@
 
 // Layout
 @import "layout/_header";
+@import "layout/_footer";
+@import "layout/_top-content";
+@import "layout/_howitwork";
+@import "layout/_advantage";
+@import "layout/_opportunity";
+@import "layout/_steps";
+@import "layout/_faq";
+@import "layout/_partners";
+@import "layout/_feedback";
 @import "layout/_footer";
 // Components
 

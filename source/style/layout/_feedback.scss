@@ -1,0 +1,59 @@
+.fb-row {
+  margin-bottom: 60px;
+}
+.fb-group {
+  margin-bottom: 20px;
+}
+.fb-lable {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin-bottom: 5px;
+}
+.fb-input {
+  width: 100%;
+  color:$grey;
+  background-color: $white;
+  outline: none;
+  border: 1px solid $light-grey;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px;
+  caret-color: $blue;
+  transition: all .3s;
+  &:hover, &:active, &:focus, &:focus-visible {
+    border: 1px solid $blue;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 4px rgba(75, 198, 246, 0.1);
+  }
+  &.error {
+    border: 1px solid $red;
+  }
+  &.filled {
+    border: none;
+    background-color: $light-blue;
+  }
+}
+.fb-submit {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
+}
+.fb-mess-agreement {
+  font-size: 10px;
+  font-weight: 200;
+  line-height: 1.4em;
+  color: $grey;
+  margin-top: 20px;
+}
+.fb-invalid {
+  content: 'Поле обязательное к заполнению';
+  font-size: 10px;
+  line-height: 1.5em;
+  color: $red;
+  margin-bottom: 5px;
+}

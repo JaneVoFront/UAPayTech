@@ -1,4 +1,23 @@
-header.header
-  .header__text 
-    | Builder
-  .header__logo
+header.header.block--bg-dark
+    .top-content.container
+        .top-content--left
+            .header-logo
+                a(href="#" alt='На главную' title='На главную')
+                  img.logo__img(src="/assets/img/logo-desktop.svg")
+            nav.menu-top
+                ul.menu-top__list
+                    each value, index in {'Как работает' : 'howitwork', 'Преимущества' : 'advantages', 'Возможности' : 'opportunities', 'Этапы подключения' : 'connection stages', 'FAQ' : 'faq'}
+                        li
+                            a(href= "#" + value)= index
+        .top-content--right
+            ul.change-lang
+                li.target
+                    a(href="#") RU
+                        img(src="/assets/img/vector.svg")
+                    ul.change-lang__sub-menu
+                        li
+                            a(href="#") UA
+                        li
+                            a(href="#") EN
+
+            a.btn.btn__header.btn__header__wrap Подключить

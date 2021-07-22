@@ -1,0 +1,61 @@
+.faq-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  background-color: $light-blue;
+  border-radius: 16px;
+  position: relative;
+  transition: all .3s;
+  margin-bottom: 15px;
+  &:after {
+    content: '';
+    width: 26px;
+    height: 17px;
+    background-image: url('../img/vector-faq.svg');
+    background-size: contain;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transform: rotate(0deg);
+    transition: all .3s;
+  }
+  &:hover, &[open] {
+    &:after {
+      transform: rotate(90deg);
+    }
+  }
+  &[open] {
+    animation-name: fadeInDown;
+    animation-duration: 0.5s;
+  }
+  & summary::-webkit-details-marker {
+    display: none
+  }
+  & summary {
+    list-style: none;
+  }
+  & summary {
+    width: 100%;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4em;
+    cursor: pointer;
+  }
+  & p {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

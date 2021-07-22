@@ -1,0 +1,39 @@
+.opportunity-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.opportunity-item {
+  width: calc((100% - 60px)/3);
+  padding: 20px;
+  display: flex;
+  background-color: $light-blue;
+  border-radius: 16px;
+  flex-direction: column;
+  align-self: stretch;
+  margin-bottom: 30px;
+  min-height: 161px;
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    font-weight: 500;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $blue;
+    }
+  }
+  &__discription {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400;
+  }
+}

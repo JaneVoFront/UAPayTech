@@ -1,0 +1,24 @@
+.advantage-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.advantage-item {
+  display: flex;
+  align-items: self-start;
+  width: 30%;
+  margin-bottom: 50px;
+  &__text {
+    padding-left: 20px;
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400;
+  }
+  &__title {
+    font-weight: 500;
+  }
+}

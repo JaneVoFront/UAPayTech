@@ -1,0 +1,17 @@
+.footer {
+  padding: 60px 0;
+}
+.footer-items {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 1.4em;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: $grey;
+  line-height: 1.4;
+}

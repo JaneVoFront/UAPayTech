@@ -1,0 +1,33 @@
+.steps-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.steps-item {
+  width: calc((100% - 168px) / 4);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  margin-bottom: 60px;
+  &__title {
+    background: radial-gradient(50% 50% at 50% 50%, #4BC6F6 0%, rgba(75, 198, 246, 0) 100%);
+    font-size: 48px;
+    line-height: 1.3em;
+    width: 67px;
+    height: 67px;
+    margin-bottom: 25px;
+    font-weight: 500;
+  }
+  &__discription {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400;
+  }
+  &__img {
+    max-width: 231px;
+    max-height: 248px;
+  }
+}

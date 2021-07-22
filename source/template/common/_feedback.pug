@@ -1,0 +1,29 @@
+section.feedback.block--bg-light-blue
+    .container.container--xs
+        h2.section__title
+            | Свяжитесь с нами
+        .section__content
+            form
+                .fb-row
+                    .fb-group
+                        lable.fb-lable(for="name") Имя и Фамилия*
+                        input.fb-input(id="name", type="text", value="", name="name", required="required")
+                        .fb-invalid
+                    .fb-group
+                        label.fb-lable(for="tel") Телефон*
+                        input.fb-input.error(id="tel", type="text", value="", name="tel", required="required")
+                        .fb-invalid Поле обязательно к заполнению
+                    .fb-group
+                        label.fb-lable(for="email") E-mail
+                        input.fb-input(id="email", type="text", value="", name="email")
+                        .fb-invalid
+                    .fb-group
+                        label.fb-lable(for="company") Компания
+                        input.fb-input(id="company", type="text", value="", name="company")
+                        .fb-invalid
+                .fb-submit
+                    button.btn.btn__content Оставить заявку
+                    p.fb-mess-agreement
+                        | Нажимая на кнопку “Оставить заявку”, вы подтверждаете согласие на обработку
+                        |
+                        a.link.link--grey.link--xs(href="#") персональных данных

@@ -1,10 +1,15 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: $geom;
 }
 
 *, *::before, *::after { 
   box-sizing: border-box; 
+}
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .visuallyhidden:not(:focus):not(:active) {
@@ -21,4 +26,129 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.block--bg-dark {
+  background-color: $dark-grey;
+  color: $white;
+}
+.block--bg-light {
+  background-color: $white;
+  color: $dark-grey;
+}
+.block--bg-light-blue {
+  background-color: $light-blue;
+  color: $dark-grey;
+}
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  color: $blue;
+  transition: all .3s;
+  position: relative;
+  line-height: 21px;
+
+  &:before {
+    content: '';
+    background-color: $blue;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 100%;
+    transition: all .3s;
+  }
+  &:hover {
+    color: $white;
+
+    &:before {
+      width: 0;
+    }
+  }
+  &--blue {
+    color: $blue;
+    &:before {
+      background-color: $blue;
+    }
+    &:hover {
+      color: $white;
+      &:before {
+        width: 0;
+      }
+    }
+  }
+  &--grey {
+    color: $grey;
+    &:before {
+      background-color: $light-grey;
+    }
+    &:hover {
+      color: $grey;
+    }
+  }
+  &--xs {
+    font-size: 10px;
+    font-weight: 200;
+    line-height: 1.1em;
+  }
+  &--white {
+    color: $white;
+    font-weight: 500;
+    font-size: 14px;
+    &:before {
+      background-color: $white;
+    }
+  }
+}
+.text-color--blue {
+  color: $blue;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  &--sm {
+    width: 770px;
+  }
+  &--xs {
+    width: 470px;
+    @media only screen and (max-width: 469px){
+      width: 100%;
+    }
+  }
+}
+
+h1 {
+  font-size: 44px;
+  line-height: 1.3em;
+  margin-bottom: 30px;
+  font-weight: 500;
+  @media only screen and (max-width: 620px){
+    font-size: 30px;
+  }
+}
+h2 {
+  font-size: 36px;
+  line-height: 1.3em;
+  margin-bottom: 60px;
+  font-weight: 500;
+  @media only screen and (max-width: 620px){
+    font-size: 26px;
+  }
+}
+h3 {
+  font-size: 20px;
+  line-height: 1.4em;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+p {
+  margin: 0 0 10px 0;
+  line-height: 1.5em;
+}
+section {
+  padding: 100px 0;
 }

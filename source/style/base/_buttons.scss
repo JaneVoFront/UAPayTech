@@ -1,0 +1,51 @@
+@import '../config/_variables.scss';
+
+.btn {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease .3s;
+  width: fit-content;
+  &-wrap {
+    &--center{
+      margin: 0 auto;
+    }
+  }
+}
+.btn__content {
+  padding: 15px 0;
+  color: $white;
+  background-color: $blue;
+  font-weight: 700;
+  width: 280px;
+  justify-content: center;
+  border: none;
+  &:hover, &:active, &:focus {
+    box-shadow: 0 0 5px 5px rgba(75, 198, 246, 0.22);
+    -webkit-box-shadow: 0 0 5px 5px rgba(75, 198, 246, 0.22);
+    -moz-box-shadow: 0 0 5px 5px rgba(75, 198, 246, 0.22);
+  }
+  &__wrap {
+    margin-top: 40px;
+  }
+}
+.btn__header {
+  padding: 11px 30px;
+  color: $blue;
+  border: 1px solid $blue;
+  font-weight: 500;
+  &:hover, &:active, &:focus {
+    color: $white;
+    background-color: $blue;
+  }
+  &__wrap {
+    margin-left: 40px;
+  }
+}
+.btn-go-top {
+  width: 48px;
+  height: 48px;
+  background-image: url("/assets/img/btn-go-top.svg");
+  background-size: contain;
+}
