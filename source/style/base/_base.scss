@@ -11,7 +11,18 @@ body {
   margin: 0;
   padding: 0;
 }
-
+p {
+  margin: 0 0 10px 0;
+  line-height: 1.5em;
+}
+section {
+  padding: 100px 0;
+}
+@media only screen and (max-width: 768px){
+  section {
+    padding: 50px 0;
+  }
+}
 .visuallyhidden:not(:focus):not(:active) {
   position: absolute;
 
@@ -163,11 +174,4 @@ h3 {
   line-height: 1.4em;
   margin-bottom: 10px;
   font-weight: 500;
-}
-p {
-  margin: 0 0 10px 0;
-  line-height: 1.5em;
-}
-section {
-  padding: 100px 0;
 }

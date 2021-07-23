@@ -1,5 +1,8 @@
 .howitwork {
   padding: 100px 0 0;
+  @media only screen and (max-width: 768px){
+    padding: 50px 0 0;
+  }
 }
 .howitwork-list {
   display: flex;
@@ -15,7 +18,6 @@
   flex-direction: column;
   align-self: stretch;
   justify-content: inherit;
-
   &:before {
     content: '';
     position: absolute;
@@ -48,5 +50,28 @@
   }
   &:last-child:before {
     background: linear-gradient(90deg, #4BC6F6 85.42%, rgba(75, 198, 246, 0.37) 93.23%, rgba(75, 198, 246, 0.08) 100%);
+  }
+  @media only screen and (max-width: 768px){
+    width: 100%;
+    flex-direction: row;
+    padding-left: 15px;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      background-color: $blue;
+      left: 0;
+      top: 6px;
+    }
+    &:after {
+      left: -4px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+    }
+    &:last-child:before {
+     display: none;
+    }
   }
 }
