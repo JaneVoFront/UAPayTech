@@ -51,6 +51,11 @@
   &:last-child:before {
     background: linear-gradient(90deg, #4BC6F6 85.42%, rgba(75, 198, 246, 0.37) 93.23%, rgba(75, 198, 246, 0.08) 100%);
   }
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
   @media only screen and (max-width: 768px){
     width: 100%;
     flex-direction: row;

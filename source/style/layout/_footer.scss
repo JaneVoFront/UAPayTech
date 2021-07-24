@@ -1,5 +1,13 @@
 .footer {
   padding: 60px 0;
+  position: relative;
+}
+.footer-hr {
+  display: none;
+  margin: 20px 0;
+  @media only screen and (max-width: 768px){
+    display: block;
+  }
 }
 .footer-items {
   display: flex;
@@ -8,10 +16,25 @@
   line-height: 1.4em;
   font-weight: 500;
   margin-bottom: 30px;
+  @media only screen and (max-width: 768px){
+    flex-direction: column;
+  }
 }
-
+.footer-item:first-child {
+  margin-bottom: 20px;
+}
+.footer-item p:last-child {
+  margin-bottom: 0;
+}
 .copyright {
   font-size: 12px;
   color: $grey;
   line-height: 1.4;
+  padding: 30px 0;
+}
+.footer-btn-top {
+  position: absolute;
+  z-index: 99;
+  top: 50px;
+  right: 20px;
 }
