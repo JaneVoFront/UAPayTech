@@ -12,10 +12,18 @@
   height: 126px;
   border-radius: 22px;
   background-color: $white;
-  padding: 20px;
   margin-right: 60px;
   &__img {
-    width: auto;
-    height: auto;
+    width: inherit;
+    height: inherit;
+    padding: 20px;
+  }
+  @include tablets {
+    width: 112px;
+    height: 90px;
+    margin-right: 25px;
+    &__img {
+      padding: 10px;
+    }
   }
 }

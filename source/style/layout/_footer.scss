@@ -1,6 +1,11 @@
 .footer {
   padding: 60px 0;
-  position: relative;
+  & .section__content {
+    position: relative;
+  }
+  @include tablets {
+    padding: 50px 0 0 0;
+  }
 }
 .footer-hr {
   display: none;
@@ -12,12 +17,17 @@
 .footer-items {
   display: flex;
   justify-content: space-between;
+  width: calc(100% - 200px);
   font-size: 14px;
   line-height: 1.4em;
   font-weight: 500;
   margin-bottom: 30px;
   @include tablets {
     flex-direction: column;
+    margin-bottom: 0;
+  }
+  @include laptop {
+    width: calc(100% - 130px);
   }
 }
 .footer-item:first-child {
@@ -35,6 +45,6 @@
 .footer-btn-top {
   position: absolute;
   z-index: 99;
-  top: 50px;
-  right: 20px;
+  top: 0;
+  right: 0;
 }

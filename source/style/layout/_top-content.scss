@@ -41,6 +41,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include phones {
+      & img {
+        height: 15px;
+      }
+    }
   }
 }
 
