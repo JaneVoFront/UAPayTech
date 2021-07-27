@@ -1,8 +1,11 @@
 
 .top-content {
   &__wrap {
+    display: flex;
+    align-self: stretch;
+    flex-direction: row;
+    height: 100%;
     padding: 65px 0 60px 0;
-    height: calc(100vh - 80px);
   }
   &__right {
     display: flex;
@@ -22,15 +25,14 @@
     padding-bottom:100px;
   }
   &__image {
-
     display: flex;
     align-items: center;
-    @media only screen and (max-width: 1200px) {
+    @include device {
       display: none;
     }
   }
   &__text {
-    @media only screen and (max-width: 1200px) {
+    @include device {
       background: url("/assets/img/ellipse.svg") no-repeat top right;
       background-size: contain;
     }

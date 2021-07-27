@@ -31,7 +31,7 @@
     max-width: 231px;
     max-height: 248px;
   }
-  @media only screen and (max-width: 768px){
+  @include tablets {
     width: 100%;
     flex-direction: row;
     align-items: center;
