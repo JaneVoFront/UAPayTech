@@ -1,0 +1,18 @@
+.menu-mobile-wrap
+    .menu-mobile-container
+        .menu-mobile--top
+            a.btn-close
+            nav.menu-mobile
+                ul.menu-mobile__list
+                    each value, index in {'Как работает' : 'howitwork', 'Преимущества' : 'advantages', 'Возможности' : 'opportunities', 'Этапы подключения' : 'connection stages', 'FAQ' : 'faq'}
+                        li
+                            a(href= "#" + value)= index
+        .menu-mobile--bottom
+            .menu-mobile__contact
+                p sales@paytech.com
+                p + 38 (093) 45 66 77
+                p Киев, ул. Ярославская 34а
+            ul.change-lang--mobile
+                each value in ['RU', 'UA', 'ENG']
+                    li
+                        a(href= "#")= value

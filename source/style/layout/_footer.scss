@@ -17,7 +17,6 @@
 .footer-items {
   display: flex;
   justify-content: space-between;
-  width: calc(100% - 200px);
   font-size: 14px;
   line-height: 1.4em;
   font-weight: 500;
@@ -25,9 +24,6 @@
   @include tablets {
     flex-direction: column;
     margin-bottom: 0;
-  }
-  @include laptop {
-    width: calc(100% - 130px);
   }
 }
 .footer-item:first-child {
@@ -41,10 +37,4 @@
   color: $grey;
   line-height: 1.4;
   padding: 30px 0;
-}
-.footer-btn-top {
-  position: absolute;
-  z-index: 99;
-  top: 0;
-  right: 0;
 }

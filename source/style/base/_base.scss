@@ -1,7 +1,9 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: $geom;
+  position: relative;
+  height: 100%;
 }
 
 *, *::before, *::after { 
@@ -18,7 +20,7 @@ p {
 section {
   padding: 100px 0;
 }
-@media only screen and (max-width: 768px){
+@include tablets{
   section {
     padding: 50px 0;
   }
@@ -121,16 +123,17 @@ section {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  @media only screen and (min-width: 320px) and (max-width: 575.98px){
+  @include smallPhone {
     width: 100%;
   }
-  @media only screen and (min-width: 576px) and (max-width: 767.98px){
+  @include tablets {
     width: 100%;
   }
-  @media only screen and (min-width: 768px) and (max-width: 991.98px){
+  @include laptop {
     width: 100%;
+    padding: 0 20px;
   }
-  @media only screen and (min-width: 992px) and (max-width: 1199.98px){
+  @include device {
     width: 100%;
   }
   @media only screen and (min-width: 1230px){
@@ -138,13 +141,13 @@ section {
   }
   &--sm {
     width: 770px;
-    @media only screen and (max-width: 769px){
+    @include tablets {
       width: 100%;
     }
   }
   &--xs {
     width: 470px;
-    @media only screen and (max-width: 469px){
+    @include phones {
       width: 100%;
     }
   }
@@ -155,7 +158,7 @@ h1 {
   line-height: 1.3em;
   margin-bottom: 30px;
   font-weight: 500;
-  @media only screen and (max-width: 620px){
+  @include smallTablets {
     font-size: 30px;
   }
 }
@@ -164,7 +167,7 @@ h2 {
   line-height: 1.3em;
   margin-bottom: 60px;
   font-weight: 500;
-  @media only screen and (max-width: 768px){
+  @include tablets {
     font-size: 26px;
     margin-bottom: 30px;
   }

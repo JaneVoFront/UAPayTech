@@ -42,10 +42,34 @@
   &__wrap {
     margin-left: 40px;
   }
+  @include device {
+    display: none;
+  }
 }
 .btn-go-top {
   width: 48px;
   height: 48px;
   background-image: url("/assets/img/btn-go-top.svg");
   background-size: contain;
+  position: absolute;
+  z-index: 99;
+  bottom: 40px;
+  right: 40px;
+  @include tablets {
+    right: 20px;
+  }
+}
+.btn-close {
+  display: flex;
+  &:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url("/assets/img/btn-close.svg");
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
 }
