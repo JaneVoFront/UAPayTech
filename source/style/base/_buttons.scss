@@ -6,14 +6,12 @@
   border-radius: 10px;
   cursor: pointer;
   transition: all ease .3s;
-  width: fit-content;
-  &-wrap {
-    &--center{
-      margin: 0 auto;
-    }
+  text-decoration: none;
+  &:hover, &:active, &:focus {
+    text-decoration: none;
   }
 }
-.btn__content {
+.btn--bg-blue{
   padding: 15px 0;
   color: $white;
   background-color: $blue;
@@ -26,11 +24,8 @@
     -webkit-box-shadow: 0 0 5px 5px rgba(75, 198, 246, 0.22);
     -moz-box-shadow: 0 0 5px 5px rgba(75, 198, 246, 0.22);
   }
-  &__wrap {
-    margin-top: 40px;
-  }
 }
-.btn__header {
+.btn--bg-none {
   padding: 11px 30px;
   color: $blue;
   border: 1px solid $blue;
@@ -38,9 +33,6 @@
   &:hover, &:active, &:focus {
     color: $white;
     background-color: $blue;
-  }
-  &__wrap {
-    margin-left: 40px;
   }
   @include device {
     display: none;

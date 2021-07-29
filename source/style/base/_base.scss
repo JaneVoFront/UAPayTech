@@ -123,6 +123,7 @@ section {
 .container {
   padding: 0 15px;
   margin: 0 auto;
+  position: relative;
   @include smallPhone {
     width: 100%;
   }

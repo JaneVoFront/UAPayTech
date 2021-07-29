@@ -1,28 +1,25 @@
-
-.top-content {
-  &__wrap {
+@import 'config/_variables.scss';
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom:100px;
+  &-wrap {
     display: flex;
-    align-self: stretch;
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
     padding: 65px 0 60px 0;
   }
-  &__right {
+  &--right {
     display: flex;
     align-items: center;
     justify-content: end;
   }
-  &__left {
+  &--left {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-  }
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom:100px;
   }
   &__image {
     display: flex;
@@ -32,19 +29,22 @@
     }
   }
   &__text {
+    & .btn {
+      margin-top: 40px;
+    }
     @include device {
       background: url("/assets/img/ellipse.svg") no-repeat top right;
       background-size: contain;
     }
   }
-  &__logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include phones {
-      & img {
-        height: 15px;
-      }
+}
+.header-payments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include phones {
+    & img {
+      height: 15px;
     }
   }
 }
