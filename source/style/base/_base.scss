@@ -56,7 +56,7 @@ section {
 .link {
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: inherit;
   font-weight: 400;
   color: $blue;
   transition: all .3s;
