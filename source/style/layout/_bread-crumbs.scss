@@ -1,0 +1,41 @@
+.bread-crumbs {
+  margin: 20px 0;
+  &-wrap {
+    display: flex;
+    height: 100%;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+  }
+  &__list li {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    &:after {
+      content: '';
+      display: flex;
+      width: 11px;
+      height: 8px;
+      margin-left: 10px;
+      background: url('../img/arrow-right-sm.svg') no-repeat;
+    }
+    &:last-child {
+      margin-right: 0;
+      &:after {
+        display: none;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $white;
+      font-size: 14px;
+      line-height: 17px;
+      &:hover, &:visited, &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.tabs {
+  padding: 0;
+}
+.tabs-header {
+  padding: 60px 0 0 0;
+}
+.tabs-menu__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  list-style: none;
+  & li {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: 25px 5px;
+    margin-right: 5px;
+    background-color: $light-blue;
+    border-radius: 16px 16px 0 0;
+    color: initial;
+    font-size: 16px;
+    line-height: 1.4em;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+    &.active {
+      background-color: $white;
+    }
+  }
+}
+.tabs-content {
+  background-color: $white;
+  width: 100%;
+  &-wrap {
+    padding: 50px 20px;
+  }
+  &-item {
+    width: 100%;
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+section.tabs
+    .tabs-header.block--bg-dark
+        .container
+            h2
+                |Юридическая информация
+            ul.tabs-menu.tabs-menu__list
+                each value, index in {'Публичный договор' : 'tab-one', 'Политика конфиденциальности' : 'tab-two', 'Правовая информация' : 'tab-three'}
+                    li(data-tabs=value).tabs-menu__item=index
+    .tabs-content.block--bg-light
+        .container
+            .tabs-content-wrap
+                .tabs-content__item#tab-one.active
+                    | текст
+                .tabs-content__item#tab-two
+                    | текст
+                .tabs-content__item#tab-three
+                    | текст
