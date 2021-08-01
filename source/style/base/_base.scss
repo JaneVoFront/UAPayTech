@@ -179,3 +179,20 @@ h3 {
   margin-bottom: 10px;
   font-weight: 500;
 }
+ul {
+  list-style-type: none;
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    &:before {
+    content: '';
+    display: flex;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $light-grey;
+    margin-right: 10px;
+    }
+  }
+}

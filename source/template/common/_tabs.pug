@@ -4,14 +4,15 @@ section.tabs
             h2
                 |Юридическая информация
             ul.tabs-menu.tabs-menu__list
-                each value, index in {'Публичный договор' : 'tab-one', 'Политика конфиденциальности' : 'tab-two', 'Правовая информация' : 'tab-three'}
-                    li(data-tabs=value).tabs-menu__item=index
+                li(data-tabs='tab-one').tabs-menu__item.is-active Публичный договор
+                li(data-tabs='tab-two').tabs-menu__item Политика конфиденциальности
+                li(data-tabs='tab-three').tabs-menu__item Правовая информация
     .tabs-content.block--bg-light
         .container
             .tabs-content-wrap
-                .tabs-content__item#tab-one.active
-                    | текст
+                .tabs-content__item#tab-one.is-active
+                    include ../common/_legal-info-part
                 .tabs-content__item#tab-two
-                    | текст
+                    | текст 2
                 .tabs-content__item#tab-three
-                    | текст
+                    | текст 3

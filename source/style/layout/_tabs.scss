@@ -9,7 +9,8 @@
   flex-flow: row wrap;
   justify-content: space-between;
   list-style: none;
-  & li {
+}
+.tabs-menu__item {
     display: flex;
     justify-content: center;
     flex: 1;
@@ -21,21 +22,25 @@
     font-size: 16px;
     line-height: 1.4em;
     cursor: pointer;
+    box-shadow: inset -5px -5px 25px -20px #333;
+    transition: all .3s ease-in-out;
     &:last-child {
       margin-right: 0;
     }
-    &.active {
+    &.is-active, &:hover, &:focus {
+      transition: all .3s ease-in-out;
       background-color: $white;
+      box-shadow: none;
     }
-  }
 }
+
 .tabs-content {
   background-color: $white;
   width: 100%;
   &-wrap {
     padding: 50px 20px;
   }
-  &-item {
+  &__item {
     width: 100%;
     display: none;
     &.is-active {

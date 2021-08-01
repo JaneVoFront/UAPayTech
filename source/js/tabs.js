@@ -1,6 +1,6 @@
-var tabs = document.querySelector('.tabs')
-    mitem = tabs.querySelectorAll('.tabs-menu__item')
-    citem = tabs.querySelectorAll('.tabs-content__item')
+let tabs = document.querySelector('.tabs')
+let    mitem = tabs.querySelectorAll('.tabs-menu__item')
+let   citem = tabs.querySelectorAll('.tabs-content__item')
 
 function change(arr, i) {
     arr.forEach( item => {
@@ -14,4 +14,3 @@ for(let i = 0; i < mitem.length; i++) {
         change([mitem, citem], i)
     })
 }
-change();
