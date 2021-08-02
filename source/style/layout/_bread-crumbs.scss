@@ -39,3 +39,8 @@
     }
   }
 }
+.header-page--light {
+  .bread-crumbs__list li a {
+    color: $light-grey;
+  }
+}

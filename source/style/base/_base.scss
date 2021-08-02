@@ -19,9 +19,7 @@ p {
 }
 section {
   padding: 100px 0;
-}
-@include tablets{
-  section {
+  @include tablets {
     padding: 50px 0;
   }
 }
@@ -40,6 +38,7 @@ section {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .block--bg-dark {
   background-color: $dark-grey;
   color: $white;
@@ -54,51 +53,29 @@ section {
 }
 
 .link {
-  text-decoration: none;
-  display: inline-block;
   font-size: inherit;
   font-weight: 400;
   color: $blue;
+  text-decoration: none;
+  line-height: 1.2em;
+  background:  no-repeat 0 100%;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-position-x: 50%;
   transition: all .3s;
-  position: relative;
-  line-height: 21px;
-
-  &:before {
-    content: '';
-    background-color: $blue;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 1px;
-    width: 100%;
-    transition: all .3s;
-  }
-  &:hover {
+  &:hover, &:focus {
     color: $white;
-
-    &:before {
-      width: 0;
-    }
+    background-size: 0 1px;
   }
   &--blue {
     color: $blue;
-    &:before {
-      background-color: $blue;
-    }
-    &:hover {
-      color: $white;
-      &:before {
-        width: 0;
-      }
+    &:hover, &:focus {
+      color: $blue;
     }
   }
   &--grey {
     color: $grey;
-    &:before {
-      background-color: $light-grey;
-    }
-    &:hover {
+    &:hover, &:focus {
       color: $grey;
     }
   }
@@ -111,11 +88,12 @@ section {
     color: $white;
     font-weight: 500;
     font-size: 14px;
-    &:before {
-      background-color: $white;
+    &:hover, &:focus {
+      color: $grey;
     }
   }
 }
+
 .text-color--blue {
   color: $blue;
 }
@@ -179,20 +157,76 @@ h3 {
   margin-bottom: 10px;
   font-weight: 500;
 }
-.page_list {
+.sub-title {
+  font-size: 20px;
+  line-height: 1.4em;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.page {
+  &-wrap {
+    margin-top: 40px;
+  }
+  &__list {
+    list-style-type: none;
+    li {
+      display: block;
+      align-items: center;
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 15px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $light-grey;
+        left: 0;
+        top: 5px;
+      }
+    }
+  }
+  & h3 {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4em;
+    font-weight: 500;
+  }
+  & p {
+    margin-bottom: 10px;
+    line-height: 1.5em;
+  }
+}
+.title--sm {
+  margin: 15px 0 5px 0;
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 500;
+}
+
+ol.ol--blue {
   list-style-type: none;
-  li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+  counter-reset: num;
+  margin: 0 0 0 30px;
+  padding: 15px 0 5px 0;
+
+  &>li {
+    position: relative;
+    padding: 0 0 20px 0;
+    line-height: 1.5em;
     &:before {
-    content: '';
-    display: flex;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: $light-grey;
-    margin-right: 10px;
+      content: counter(num) '.';
+      counter-increment: num;
+      display: inline-block;
+      position: absolute;
+      top: 0px;
+      left: -30px;
+      width: 30px;
+      font-size: 20px;
+      font-weight: 500;
+      color: $blue;
+      text-align: left;
     }
   }
 }

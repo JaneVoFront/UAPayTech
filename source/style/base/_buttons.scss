@@ -65,3 +65,15 @@
     opacity: 0.8;
   }
 }
+.header-page--light {
+  & .btn--bg-none {
+    color: $white;
+    background-color: $blue;
+    border: none;
+    &:hover, &:active, &:focus {
+      box-shadow: 0 0 5px 5px rgba(75, 198, 246, 0.22);
+      -webkit-box-shadow: 0 0 5px 5px rgba(75, 198, 246, 0.22);
+      -moz-box-shadow: 0 0 5px 5px rgba(75, 198, 246, 0.22);
+    }
+  }
+}
