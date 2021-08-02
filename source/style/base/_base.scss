@@ -23,6 +23,9 @@ section {
     padding: 50px 0;
   }
 }
+ol ul, ul ol {
+  margin-top: 10px;
+}
 .visuallyhidden:not(:focus):not(:active) {
   position: absolute;
 
@@ -227,6 +230,32 @@ ol.ol--blue {
       font-weight: 500;
       color: $blue;
       text-align: left;
+    }
+  }
+}
+.border-left--blue {
+  border-left: 1px solid $blue;
+  padding: 0 0 0 15px;
+  font-weight: 500;
+}
+.logo-download {
+  &-wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 25px 0 0 0;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 50px;
+    & img {
+      height: 22px;
+      object-fit: contain;
+      margin-bottom: 5px;
     }
   }
 }
