@@ -38,6 +38,6 @@ window.onload = function() {
             })
         }
     } else {
-        break
-    };
+        return false;
+    }
 };
