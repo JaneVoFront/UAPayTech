@@ -222,4 +222,12 @@
       }
     }
   }
+  .toggle-menu {
+    & span {
+      background-color: $dark-grey;
+      &:after, &:before {
+        background-color:  $dark-grey;
+      }
+    }
+  }
 }

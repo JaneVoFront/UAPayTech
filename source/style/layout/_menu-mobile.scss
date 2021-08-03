@@ -1,4 +1,7 @@
 @import '../config/_variables.scss';
+//toggle-menu
+
+
 .menu-mobile-wrap {
   position: absolute;
   top: 0;
@@ -7,8 +10,14 @@
   left: 0;
   z-index: 999;
   background-color: rgba(33, 33, 33, 0.78);
-  display: flex;
   justify-content: flex-end;
+  display: none;
+  transform: translateX(-100%);
+  transition-delay: 0.3s;
+  & .show-to-left {
+    display: flex;
+    transform: translateX(0);
+  }
 }
 .menu-mobile-container {
   display: flex;
@@ -102,3 +111,4 @@
     }
   }
 }
+

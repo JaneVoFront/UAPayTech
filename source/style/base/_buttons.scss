@@ -38,17 +38,23 @@
     display: none;
   }
 }
+
 .btn-go-top {
   width: 48px;
   height: 48px;
   background-image: url("/assets/img/btn-go-top.svg");
   background-size: contain;
-  position: absolute;
+  position: fixed;
   z-index: 99;
   bottom: 40px;
   right: 40px;
+  cursor: pointer;
+  display: none;
   @include tablets {
     right: 20px;
+  }
+  &--show {
+    display: block;
   }
 }
 .btn-close {
