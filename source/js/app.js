@@ -48,19 +48,28 @@
                 document.querySelector('.menu-mobile-container').classList.add('slide-right');
             });
 
-            document.querySelector('.link-more-show').addEventListener('click', function () {
-                document.querySelector('.content-text__more').classList.remove('hide', 'fadeInDown', 'fadeInUp');
-                document.querySelector('.content-text__more').classList.add('fadeInDown');
-                this.setAttribute('style', 'display: none');
-            });
 
-            document.querySelector('.link-more-hide').addEventListener('click', function () {
-                document.querySelector('.content-text__more').classList.add('hide');
-                document.querySelector('.content-text__more').classList.remove('fadeInDown');
-                document.querySelector('.content-text__more').classList.add('fadeInUp');
-                document.querySelector('.link-more-show').setAttribute('style', 'display: inline-flex');
-            });
-        };
+                let moreShow = document.querySelector('.link-more-show')
+                let moreContent = document.querySelector('.content-text__more')
+                moreShow.addEventListener('click', function ()
+                    {
+                        moreContent.classList.remove('hide', 'fadeInDown', 'fadeInUp');
+                        moreContent.classList.add('fadeInDown');
+                        this.setAttribute('style', 'display: none');
+                    });
+                let moreHide =  document.querySelector('.link-more-hide');
+                moreHide.addEventListener('click', function ()
+                    {
+                        moreContent.classList.add('fadeInUp');
+                        moreContent.classList.remove('fadeInDown');
+                        window.setTimeout(function ()
+                        {
+                            moreContent.classList.add('hide');
+                        }, 500);
+                        moreShow.setAttribute('style', 'display: inline-flex');
+                    });
+
+
 //Go to top
     function trackScroll() {
         var scrolled = window.pageYOffset;
