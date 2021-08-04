@@ -27,37 +27,24 @@
     };
     //burger
         window.onload = function() {
-            // document.querySelector('.toggle-menu').addEventListener('click', function () {
-            //     document.querySelector('.menu-mobile-wrap').classList.add('show-to-left', 'show');
-            //     document.body.classList.add('menu-mobile-wrap--show');
-            //     document.querySelector('.menu-mobile-container').classList.remove('slide-right');
-            // })
-            //
-            //     document.querySelector('.btn-close').addEventListener('click', function () {
-            //         window.setTimeout(function(){
-            //             document.querySelector('.menu-mobile-wrap').classList.remove('show-to-left', 'show');
-            //             document.body.classList.remove('menu-mobile-wrap--show');
-            //     }, 500);
-            //             document.querySelector('.menu-mobile-container').classList.add('slide-right');
-            //     });
-            //     document.querySelector('.close-outer').addEventListener('click', function () {
-            //         window.setTimeout(function(){
-            //             document.querySelector('.menu-mobile-wrap').classList.remove('show-to-left', 'show');
-            //             document.body.classList.remove('menu-mobile-wrap--show');
-            //     },500);
-            // });
+            document.querySelector('.toggle-menu').addEventListener('click', function () {
 
-
-            document.querySelector('.toggle-menu').addEventListener('click', function(){
                 document.body.classList.add('menu-mobile-wrap--show');
                 document.querySelector('.menu-mobile-container').classList.remove('slide-right');
-            });
+            })
+
             document.querySelector('.btn-close').addEventListener('click', function () {
-                document.body.classList.remove('menu-mobile-wrap--show');
+                window.setTimeout(function () {
+
+                    document.body.classList.remove('menu-mobile-wrap--show');
+                }, 300);
                 document.querySelector('.menu-mobile-container').classList.add('slide-right');
             });
             document.querySelector('.close-outer').addEventListener('click', function () {
-                document.body.classList.remove('menu-mobile-wrap--show');
+                window.setTimeout(function () {
+
+                    document.body.classList.remove('menu-mobile-wrap--show');
+                }, 300);
                 document.querySelector('.menu-mobile-container').classList.add('slide-right');
             });
         };
@@ -85,15 +72,15 @@
     /*goTopBtn.addEventListener('click', backToTop);*/
 })
 ();
-// Burger Menu
- //function(){
- //   $(".toggle-menu").on("click", function(){
- //       $('body').addClass('right_toggle_open');
- //   });
- //   $(".toggle_close").on("click", function(){
- //       $('body').removeClass('right_toggle_open');
- //   });
- //   $(".outer_close").on("click", function(){
- //       $('body').removeClass('right_toggle_open');
- //   });
-//}
+window.onload = function show() {
+    document.querySelector('.link-more-show').addEventListener('click', function () {
+        document.querySelector('.content-text__more').classList.remove('hide');
+        this.setAttribute('style', 'display: none')
+    })
+};
+window.onload = function hide() {
+    document.querySelector('.link-more-hide').addEventListener('click', function () {
+        document.querySelector('.content-text__more').classList.add('hide');
+
+    })
+};

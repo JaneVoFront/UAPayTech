@@ -15,8 +15,8 @@ body.menu-mobile-wrap--show {
     -webkit-transform: translate(0px, 0px);
     -moz-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
-    overflow-y: scroll !important;
-    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    /*overflow-y: scroll !important;*/
   }
 }
 .close-outer {
@@ -34,25 +34,8 @@ body.menu-mobile-wrap--show {
   background: rgba(0, 0, 0, 0.43);
 }
 
-.menu-mobile-wrap {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  display: flex;
-  justify-content: flex-end;
-  opacity: 0;
-  z-index: 3;
-  visibility: hidden;
-}
 .menu-mobile-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  width: 260px;
-  background-color: $white;
-  padding: 20px;
+  right: 0;
   -webkit-transition: -webkit-transform 500ms ease;
   -moz-transition: transform 500ms ease;
   -o-transition: -o-transform 500ms ease;
@@ -62,14 +45,32 @@ body.menu-mobile-wrap--show {
   transform: translate(300px, 0px);
   -o-transform: translate(300px, 0px);
   -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 260px;
+  background-color: $white;
+  padding: 20px;
   position: fixed;
   top:0;
+  height: 100%;
   bottom: 0;
-  right: 0;
   z-index: 100;
 }
+.menu-mobile-wrap {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  z-index: 3;
+  visibility: hidden;
+}
 .slide-right{
-  animation: fadeInRight 700ms ease-in-out;
+  animation: fadeInRight 300ms ease-in-out;
 }
 @keyframes fadeInRight {
   0% {
@@ -82,7 +83,7 @@ body.menu-mobile-wrap--show {
   }
 }
 .slide-right{
-  animation: fadeInRight 700ms ease-in-out;
+  animation: fadeInRight 500ms ease-in-out;
 }
 @keyframes fadeInLeft {
   0% {

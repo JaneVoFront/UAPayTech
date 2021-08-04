@@ -7,6 +7,7 @@
   position: relative;
   transition: all .3s;
   margin-bottom: 15px;
+  z-index: 50;
   &:after {
     content: '';
     width: 26px;
@@ -18,21 +19,20 @@
     top: 20px;
     transform: rotate(0deg);
     transition: all .3s;
+    z-index: 40;
+    cursor: pointer;
   }
-  &:hover, &[open] {
+  &[open] {
     &:after {
       transform: rotate(90deg);
     }
   }
-  &[open] {
+  &[open] p {
     animation-name: fadeInDown;
-    animation-duration: 0.5s;
+    animation-duration: 600ms;
   }
   & summary::-webkit-details-marker {
     display: none
-  }
-  & summary {
-    list-style: none;
   }
   & summary {
     width: 100%;
@@ -41,6 +41,8 @@
     font-weight: 500;
     line-height: 1.4em;
     cursor: pointer;
+    z-index: 6;
+    list-style: none;
   }
   & p {
     padding: 20px;

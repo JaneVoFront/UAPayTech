@@ -49,6 +49,11 @@
 .hide {
   display: none!important; // for js
 }
+.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
 
 //responsive
 @function rem($px) {
