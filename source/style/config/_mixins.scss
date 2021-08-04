@@ -47,7 +47,7 @@
 }
 
 .hide {
-//  display: none!important; // for js
+  display: none!important; // for js
 }
 .show {
   display: block;
@@ -101,13 +101,13 @@
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    //transform: translateY(-10%);
+    transform: translateY(-10%);
     max-height: 0;
     height: auto;
   }
   100% {
     opacity: 1;
-    //transform: translateY(0);
+    transform: translateY(0);
     max-height: 1000px;
     height: auto;
   }
@@ -118,13 +118,13 @@
 @keyframes fadeInUp {
   0% {
     opacity: 1;
-    //transform: translateY(0);
+    transform: translateY(0);
     max-height: 1000px;
     height: auto;
   }
   100% {
     opacity: 0;
-    //transform: translateY(-10%);
+    transform: translateY(-10%);
     max-height: 0;
     height: auto;
   }
@@ -132,29 +132,35 @@
 .fadeInUp {
   animation: fadeInUp 400ms ease;
 }
-.slideUp {
-  animation: slideUp 500ms ease;
+/*************************/
+.slideShow {
+  animation: slideShow 500ms ease;
 }
-@keyframes slideUp {
+.slideHide {
+  animation: slideHide 400ms ease;
+}
+@keyframes slideHide {
   0% {
-    height: 0;
-    visibility: hidden;
+    opacity: 1;
+    max-height: 1000px;
+    height: auto;
   }
   100% {
-    height: 100%;
-    visibility: visible;
+    height: auto;
+    opacity: 0;
+    max-height: 0;
   }
 }
-.slideDown {
-  animation: slideDown 500ms ease;
-}
-@keyframes slideDown {
+
+@keyframes slideShow {
   0% {
-    height: 100%;
-    visibility: visible;
+    height: auto;
+    max-height: 0;
+    opacity: 0;
   }
   100% {
-    height: 0;
-    visibility: hidden;
+    height: auto;
+    opacity: 1;
+    max-height: 1000px;
   }
 }

@@ -48,3 +48,17 @@
     }
   }
 }
+.content-text__more {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  transition: all .4s ease;
+    &.slideShow {
+      max-height: 1000px;
+      overflow: visible;
+      opacity: 1;
+      height: auto;
+      transition: all .4s ease;
+  }
+}

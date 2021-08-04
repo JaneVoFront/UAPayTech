@@ -8,7 +8,7 @@
   transition: all .3s;
   margin-bottom: 15px;
   z-index: 50;
-  &:after {
+  & summary:after {
     content: '';
     width: 26px;
     height: 17px;
@@ -23,13 +23,14 @@
     cursor: pointer;
   }
   &[open] {
-    &:after {
+    & summary:after {
       transform: rotate(90deg);
     }
-  }
-  &[open] p {
-    animation-name: fadeInDown;
-    animation-duration: 600ms;
+
+    p {
+      animation-name: fadeInDown;
+      animation-duration: 600ms;
+    }
   }
   & summary::-webkit-details-marker {
     display: none

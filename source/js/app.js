@@ -29,8 +29,7 @@
             }
         };
 //Burger
-    window.onload = function()
-    {
+
         document.querySelector('.toggle-menu').addEventListener('click', function ()
         {
 
@@ -56,30 +55,28 @@
             }, 300);
             document.querySelector('.menu-mobile-container').classList.add('slide-right');
         })
-    }
+
 // Подробнее/Скрыть
-
-
+let moreShow = document.querySelector('.link-more-show')
     moreShow.addEventListener('click', function ()
         {
-            moreContent.classList.remove('fadeInUp');
-            moreContent.classList.add('fadeInDown');
+            let moreContent = document.querySelector('.content-text__more')
+            moreContent.classList.add('slideShow');
             this.setAttribute('style', 'display: none');
         });
-
+let moreHide =  document.querySelector('.link-more-hide')
     moreHide.addEventListener('click', function ()
         {
-            moreContent.classList.add('fadeInUp');
-            moreContent.classList.remove('fadeInDown');
-            window.setTimeout(function ()
-            {
-                moreContent.classList.add('hide');
-            }, 400);
+            let moreContent = document.querySelector('.content-text__more')
+            moreContent.classList.remove('slideShow');
+            //moreContent.classList.add('slideHide');
+           // window.setTimeout(function ()
+           // {
+               // moreContent.classList.add('fadeInUp');
+           // }, 400);
             moreShow.setAttribute('style', 'display: inline-flex');
         });
-let moreShow = document.querySelector('.link-more-show')
-let moreContent = document.querySelector('.content-text__more')
-let moreHide =  document.querySelector('.link-more-hide');
+
 // Go to top
 window.onload = function()
 {
