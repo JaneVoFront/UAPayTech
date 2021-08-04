@@ -7,17 +7,6 @@ body.menu-mobile-wrap--show {
     visibility: visible;
     opacity: 1;
   }
-  & .menu-mobile-wrap {
-    opacity: 1;
-    visibility: visible;
-  }
-  & .menu-mobile-container {
-    -webkit-transform: translate(0px, 0px);
-    -moz-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
-    overflow-y: scroll !important;
-    -webkit-overflow-scrolling: touch;
-  }
 }
 .close-outer {
   position: fixed;
@@ -35,37 +24,50 @@ body.menu-mobile-wrap--show {
 }
 
 .menu-mobile-wrap {
-  position: fixed;
   right: 0;
+  position: fixed;
+  -webkit-transition: -webkit-transform 500ms ease;
+  -moz-transition: transform 500ms ease;
+  -o-transition: -o-transform 500ms ease;
+  transition: transform 500ms ease;
+  -webkit-transform: translate(300px, 0px);
+  -ms-transform: translate(300px, 0px);
+  transform: translate(300px, 0px);
+  -o-transform: translate(300px, 0px);
+  -webkit-backface-visibility: hidden;
+  width: 260px;
   bottom: 0;
   top: 0;
   display: flex;
   justify-content: flex-end;
   opacity: 0;
-  z-index: 3;
+  z-index: 99;
   visibility: hidden;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    & .menu-mobile-container {
+      overflow-y: scroll !important;
+    }
+  }
+  &.show-to-left {
+    transform: translate(0px, 0px);
+  }
 }
+
 .menu-mobile-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  width: 260px;
+  width: 100%;
   background-color: $white;
   padding: 20px;
-  -webkit-transition: -webkit-transform 500ms ease;
-  -moz-transition: transform 500ms ease;
-  -o-transition: -o-transform 500ms ease;
-  transition: transform 500ms ease;
-  -webkit-transform: translate(3000px, 0px);
-  -ms-transform: translate(300px, 0px);
-  transform: translate(300px, 0px);
-  -o-transform: translate(300px, 0px);
-  -webkit-backface-visibility: hidden;
   position: fixed;
   top:0;
   bottom: 0;
   right: 0;
+  left: 0;
   z-index: 100;
 }
 .slide-right{
@@ -95,13 +97,14 @@ body.menu-mobile-wrap--show {
   }
 }
 
+
 .menu-mobile--top {
   display: flex;
   flex-direction: column;
   & .btn-close {
     align-self: flex-end;
     margin-bottom: 25px;
-   }
+  }
 }
 
 

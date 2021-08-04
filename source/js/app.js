@@ -27,9 +27,39 @@
     };
     //burger
         window.onload = function() {
-            document.querySelector('.toggle-menu').addEventListener('click', function () {
-                document.querySelector('.menu-mobile-wrap').classList.toggle('show-to-left');
-            })
+            // document.querySelector('.toggle-menu').addEventListener('click', function () {
+            //     document.querySelector('.menu-mobile-wrap').classList.add('show-to-left', 'show');
+            //     document.body.classList.add('menu-mobile-wrap--show');
+            //     document.querySelector('.menu-mobile-container').classList.remove('slide-right');
+            // })
+            //
+            //     document.querySelector('.btn-close').addEventListener('click', function () {
+            //         window.setTimeout(function(){
+            //             document.querySelector('.menu-mobile-wrap').classList.remove('show-to-left', 'show');
+            //             document.body.classList.remove('menu-mobile-wrap--show');
+            //     }, 500);
+            //             document.querySelector('.menu-mobile-container').classList.add('slide-right');
+            //     });
+            //     document.querySelector('.close-outer').addEventListener('click', function () {
+            //         window.setTimeout(function(){
+            //             document.querySelector('.menu-mobile-wrap').classList.remove('show-to-left', 'show');
+            //             document.body.classList.remove('menu-mobile-wrap--show');
+            //     },500);
+            // });
+
+
+            document.querySelector('.toggle-menu').addEventListener('click', function(){
+                document.body.classList.add('menu-mobile-wrap--show');
+                document.querySelector('.menu-mobile-container').classList.remove('slide-right');
+            });
+            document.querySelector('.btn-close').addEventListener('click', function () {
+                document.body.classList.remove('menu-mobile-wrap--show');
+                document.querySelector('.menu-mobile-container').classList.add('slide-right');
+            });
+            document.querySelector('.close-outer').addEventListener('click', function () {
+                document.body.classList.remove('menu-mobile-wrap--show');
+                document.querySelector('.menu-mobile-container').classList.add('slide-right');
+            });
         };
 //Go to top
     function trackScroll() {
