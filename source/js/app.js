@@ -77,6 +77,14 @@ let moreHide =  document.querySelector('.link-more-hide')
             moreShow.setAttribute('style', 'display: inline-flex');
         });
 
+// Спойлер
+
+var elements = document.querySelectorAll(".show-more");
+for (var i = 0; i < elements.length; i++) {
+    elements[i].onclick = function(){
+        this.querySelector('.content-text__more').setAttribute('style', 'display: block');
+    };
+}
 // Go to top
 window.onload = function()
 {

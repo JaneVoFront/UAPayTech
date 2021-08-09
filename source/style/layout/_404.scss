@@ -1,0 +1,16 @@
+.page-404 {
+  min-height: 100%;
+  background: radial-gradient(circle farthest-corner at 200% 50%, #4BC6F6 0%, #212121) 100% 100%;
+  display: flex;
+  .container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .section__content {
+    margin: auto 0;
+    h1 {
+      margin-top: -80px;
+    }
+  }
+}
