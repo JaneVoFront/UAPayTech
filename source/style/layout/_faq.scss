@@ -21,6 +21,10 @@
     transition: all .3s;
     z-index: 40;
     cursor: pointer;
+    @include tablets {
+        width: 18px;
+        height: 12px;
+    }
   }
   &[open] {
     & summary:after {
@@ -52,9 +56,5 @@
   }
   @include tablets {
     width: 100%;
-    &:after {
-      width: 18px;
-      height: 12px;
-    }
   }
 }

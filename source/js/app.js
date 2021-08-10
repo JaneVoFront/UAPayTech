@@ -78,11 +78,26 @@ let moreHide =  document.querySelector('.link-more-hide')
         });
 
 // Спойлер
-
-var elements = document.querySelectorAll(".show-more");
+window.addEventListener('resize', function () {
+    var elements = document.querySelectorAll('.opportunity-item__discription');
+    if (window.innerWidth <= 768) {
+        // 0...768
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].classList.add('hide-content');
+        }
+    }
+     else {
+        // 769...Inf
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].classList.remove('hide-content');
+        }
+    }
+});
+var elements = document.querySelectorAll('.link_show-content');
 for (var i = 0; i < elements.length; i++) {
     elements[i].onclick = function(){
-        this.querySelector('.content-text__more').setAttribute('style', 'display: block');
+        this.querySelector('.hide-content').classList.toggle('show-content');
+        this.querySelector('.opportunity-item__title').classList.toggle('active');
     };
 }
 // Go to top

@@ -38,15 +38,12 @@
   }
   &__title {
     font-weight: 500;
+    font-size: 20px;
   }
   &__discription {
     font-size: 14px;
     line-height: 1.5em;
     font-weight: 400;
-  }
-  &__img {
-    max-width: 231px;
-    max-height: 248px;
   }
   &:last-child:before {
     background: linear-gradient(90deg, #4BC6F6 85.42%, rgba(75, 198, 246, 0.37) 93.23%, rgba(75, 198, 246, 0.08) 100%);
@@ -56,10 +53,29 @@
     flex-direction: column;
     flex-wrap: nowrap;
   }
+  &__img {
+    height: 248px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+  &:first-child &__img {
+    background-image: url("/assets/img/iPhone-1.svg");
+  }
+  &:nth-child(2) &__img{
+    background-image: url("/assets/img/iPhone-2.svg");
+  }
+  &:nth-child(3) &__img{
+    background-image: url("/assets/img/iPhone-3.svg");
+  }
+  &:nth-child(4) &__img{
+    background-image: url("/assets/img/iPhone-4.svg");
+  }
   @media only screen and (max-width: 768px){
     width: 100%;
     flex-direction: row;
     padding-left: 15px;
+    justify-content: space-between;
     &:before {
       content: '';
       position: absolute;
@@ -76,7 +92,39 @@
       height: 10px;
     }
     &:last-child:before {
-     display: none;
+      display: none;
+    }
+    &__title {
+      font-size: 16px;
+      flex: 1 0 50%;
+    }
+    &__discription {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &__img {
+      min-height: 132px;
+      min-width: 50%;
+      height: auto;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right center;
+      margin-bottom: 50px;
+    }
+    &:first-child &__img{
+        background-image: url("/assets/img/iPhone-1-L.svg");
+    }
+    &:nth-child(2) &__img{
+      background-image: url("/assets/img/iPhone-2-L.svg");
+    }
+    &:nth-child(3) &__img{
+      background-image: url("/assets/img/iPhone-3-L.svg");
+      margin-bottom: 60px;
+    }
+    &:nth-child(4) &__img{
+      background-image: url("/assets/img/iPhone-4-L.svg");
+      margin-bottom: 0;
     }
   }
 }

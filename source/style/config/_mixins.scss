@@ -54,7 +54,26 @@
   opacity: 1;
   visibility: visible;
 }
+.hide-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  padding-bottom: 0;
+ /* transition: all .7s ease;*/
+  transition: padding-bottom .3s ease;
 
+  &.show-content {
+    max-height: 1000px;
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+    padding-bottom: 20px;
+    /*transition: all .7s ease;*/
+    transition: padding-bottom .3s ease;
+
+  }
+}
 //responsive
 @function rem($px) {
   @return $px / 16px+0rem;

@@ -42,9 +42,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include phones {
+  @include tablets {
+    height: 20px;
     & img {
-      height: 15px;
+      height: inherit;
+    }
+  }
+  @include smallTablets {
+    height: 15px;
+    & img {
+      height: inherit;
+    }
+  }
+  @include phones {
+    height: 12px;
+    & img {
+      height: inherit;
+    }
+  }
+  @include  smallPhone {
+    height: 12px;
+    & img {
+      height: inherit;
     }
   }
 }
